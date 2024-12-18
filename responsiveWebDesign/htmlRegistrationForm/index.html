@@ -10,15 +10,32 @@
 		<p>Please fill out this form with the required information</p>
 		<form method="post" action="https://register-demo/freecodecamp.org">
 			<fieldset>
-				<label>Enter your first name:</label>
-				<label>Enter your last name:</label>
-				<label>Enter your email:</label>
-				<label>Create a new password:</label>
+				<label for="first-name">Enter your first name: <input required name="first-name" id="first-name" type="text"/></label>
+				<label for="last-name">Enter your last name: <input required name="surname" id="last-name" type="text" /></label>
+				<label for="email">Enter your email: <input required name="email" id="email" type="email"/></label>
+				<label for="new-password">Create a new password:<input required name="passwd" id="new-password" type="password" pattern="[a-z0-5]{8,}" /></label>
 			</fieldset>
 			<fieldset>
+				<legend>Account type (required)</legend>
+				<label for="personal-account"><input type="radio" class="inline" name="account-type" id="personal-account" checked/> Personal</label>
+				<label for="business-account"><input type="radio" class="inline" name="account-type" id="business-account"/> Business</label>
 			</fieldset>
 			<fieldset>
+				<label for="profile-picture">Upload a profile picture: <input name="profile-pic" id="profile-picture" type="file"/></label>
+				<label for="age">Input your age (years): <input type="number" min="13" max="120" name="age" id="age"/></label>
+				<label for="referrer">How did you hear about us?
+					<select id="referrer" name="referrer">
+						<option value="">(select one)</option>
+						<option value="1">freeCodeCamp News</option>
+						<option value="2">freeCodeCamp YouTube Channel</option>
+						<option value="3">freeCodeCamp Forum</option>
+						<option value="4">Other</option>
+					</select>
+				</label>
+				<label for="bio">Provide a bio: <textarea name="bio" rows="3" cols="30" placeholder="I like coding on the beach..." id="bio"></textarea></label>
 			</fieldset>
+			<label for="terms-and-conditions"><input type="checkbox" class="inline" name="t&c" id="terms-and-conditions" required/>I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a></label>
+			<input type="submit" value="Submit">
 		</form>
 	</body>
 </html>
