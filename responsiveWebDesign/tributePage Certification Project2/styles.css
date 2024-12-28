@@ -1,0 +1,13 @@
+#image{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+h1, p{
+  text-align: center;
+}
+
+main{
+  background-color: #0a0a2e;
+  color: #dfdfdf;
+}
